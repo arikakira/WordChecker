@@ -20,8 +20,16 @@ public class WordChecker {
      * Precondition: wordList contains at least two elements.
      * Postcondition: wordList is unchanged.
      */
-    // public boolean isWordChain() {
-    //     /* to be implemented in part (a) */ }
+    public boolean isWordChain() {
+        for(int i=1; i<wordList.size(); i++) {
+            String after = wordList.get(i);
+            String before = wordList.get(i-1);
+            if(after.indexOf(before)<0) {
+                return false;
+            }
+        }
+        return true;
+    }
 
     /**
      * Returns an ArrayList<String> based on strings from wordList that start
@@ -32,6 +40,7 @@ public class WordChecker {
      * Items appear in the returned list in the same order as they appear in
      * wordList.
      */
-    // public ArrayList<String> createList(String target) {
-    //     /* to be implemented in part (b) */ }
+    public ArrayList<String> createList(String target) {
+        
+    }
 }
